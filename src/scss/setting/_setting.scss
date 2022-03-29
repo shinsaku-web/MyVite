@@ -1,0 +1,16 @@
+/* -----------------------------------------------
+* setting エントリーポイント
+-------------------------------------------------- */
+
+// ------------------------------color----------------------------------
+$base-color: #ffea83;
+$sub-color: #bd34fe;
+$main-color: #ffa800;
+$text-color: #41d1ff;
+
+// -----------------------------breakpoint---------------------------------
+$breakpoint: 769px; //ブレイクポイント
+$breakpoints: (
+  "sp": "screen and (max-width: #{$breakpoint - 1px})",
+  "pc": "screen and (min-width: #{$breakpoint})",
+);

@@ -1,0 +1,29 @@
+@use '../setting/setting'as s;
+@use "sass:math";
+
+// mixin
+@mixin mq($breakpoint: sp) {
+
+	@media #{map-get(s.$breakpoints, $breakpoint)} {
+
+		@content;
+	}
+}
+
+// テキストのサイズ設定、3つの変数をとる。
+@mixin text ($font-size:15, $line-height:26, $mgb:0) {
+	font-size: $font-size + px;
+	line-height: math.div($line-height, $font-size);
+
+	// マージン未設定なら表示させないので注意
+	@if ($mgb !=0) {
+		margin-bottom: $mgb + px;
+	}
+}
+
+// ボタンの大きさ設定、3つの変数をとる。
+// 初期値はヘッダーナビ内のボタン
+@mixin btn ($fs:14, $pdver: 13, $pdside:24) {
+	font-size: $fs + px;
+	padding: $pdver+ px $pdside + px;
+}

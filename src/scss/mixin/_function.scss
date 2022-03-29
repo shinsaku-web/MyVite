@@ -1,0 +1,8 @@
+@use "sass:math";
+
+// 関数
+// 割り算
+@function division($numerator, $denominator) {
+
+	@return math.div($numerator,$denominator);
+}

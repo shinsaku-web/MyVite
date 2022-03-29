@@ -1,0 +1,14 @@
+/* -----------------------------------------------
+* toppage
+-------------------------------------------------- */
+@use "../mixin" as *;
+@use "../setting/setting" as *;
+
+h1 {
+  background: linear-gradient(to right, $main-color, $base-color, $sub-color);
+  color: $text-color;
+}
+
+a {
+  background-color: $base-color;
+}
